@@ -1,0 +1,179 @@
+<html>
+
+<link href="css/style.css" rel="stylesheet">
+<head>
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};
+    return i;
+}
+</script>
+</head>
+<style>
+input:focus{
+border-color:red;
+background-color:yellow;}
+.button
+{ background-color:#00cc99;
+    border: 3px ;
+    color: #006666;
+    padding: 5px 23px;
+    text-align: center;
+    text-decoration: none;
+text-shadow:1px 1px 1px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor:pointer;}
+
+#book{
+background-color:#00ff33;
+    border: 3px;
+    color: black;
+    padding: 5px 23px;
+    text-align: center;
+    text-decoration: none;
+text-shadow:1px 1px 1px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor:pointer;
+}
+#gold
+{margin-left:20px;
+background-color:yellow;}
+
+#platinum
+{margin-left:20px;}
+
+#suit
+{margin-left:20px;}
+#leisure
+{margin-left:20px;}
+#mexican
+{margin-left:20px;}
+#italian
+{margin-left:20px;}
+#continental
+{margin-left:20px;}
+
+.button:hover {
+    background-color:#00ff33;
+    color: black;}
+body{background-color:#00cc99;}
+h1{background-color:dodgerblue);
+font-style:bold;
+font-family:times new roman;
+color:#326872;
+}
+</style>
+</head>
+<body onload="startTime()">
+<div id="txt" style="font-size:28px;color:rgb(0,70,89);text-shadow:1px 1px 1px blue;float:right;margin-left:200;
+border:2px black;background-color:#00cc99; width:195px; height:40px;"></div>
+
+
+<header id="top" style="background-color:rgb(36,39,42); height:10%;">
+    <nav role="navigation" style=" background:rgb(36,39,42); height:80px; position:absolute; width:100%;"> 
+        <ul class="blocks" >
+          <li><a href="L'AUBERGE.html">Home</a></li>
+          <li> <a href="#about" >About Us</a></li>
+          <li><a href="photo.html">Photos</a></li>
+          <li><a href="ddd.html">Book My Stay</a></li>
+          <li><a href="contact.html">contact us</a></li>
+        </ul>
+	</nav>
+        </header>
+
+<div align="center">
+
+
+<img src=E:\hello.png style="width:1350px;height:280px;">
+<h1 align="center">BOOKINGS:</h1><hr>
+<form action="book.php">
+<font color=#326872 size='4'>First Name:</font><br>
+<input type="text" name="firstname" value="" autofocus ><br><br>
+<font color=#326872 size='4'>Last Name:</font><br>
+<input type="text"  name="lastname" value="" ><br>
+<br><br>
+<font color=#326872 size='4'>Dates:</font><br>
+<input type="date"name="checkin" value="" placeholder="check-in(dd-mm-yy)"><br><br>
+<input type="date"name="checkin" value="" placeholder="check-out(dd-mm-yy)"><br><br>
+<font color=#326872 size='4'>Room's you want:</font><br>
+
+<input type="radio" name="rooms" id="silver" value="silver" checked="checked">Silver
+<input type="radio" name="rooms" id='gold' value="gold">Gold
+<input type="radio" name="rooms" id='platinum' value="platinum">Platinum
+<input type="radio" name="rooms" id='suit' value="suit">Suit<br><br>
+
+<font color=#326872 size='4'>Number of room's</font><br>
+<input type="text" name="number" style="width:30px"><br><br>
+<font color=#326872 size='4'>Preferable Cuisine:</font><br>
+<input type="checkbox" name="indian" id='indian' value="Indian">Indian
+<input type="checkbox" name="italian id='italian' value="italian">Italian
+<input type="checkbox" name="mexican" id='mexican' value="mexican">Mexican
+<input type="checkbox" name="Continental" id='continental' value="continental">Continental<br><br>
+<font color=#326872 size='4'>Email-id:</font><br>
+<input type="text" name="email" style="width:400px"><br><br>
+<font color=#326872 size='4'>Mobile Number:</font><br>
+<input type="text" name="mobile" id="mobile"value="" style="width:100px"><br><br>
+<font color=#326872 size='4'>Reason to visit</font><br>
+<input type="checkbox" name="work" id='work' value="work">Work
+<input type="checkbox" name="leisure" id='leisure' value="leisure">Leisure<br><br>
+<input type="submit" style="font-size:17pt;color:white;background-color:#006666;border:2px solid #336600;padding:3px"><br><br>
+
+
+<footer>
+  <div style="position:absolute; width:100%; height:400px; background-color:rgb(51,48,54);">
+      <div style="position:relative; float:left; width:300px; height:400px; overflow:hidden; margin:0 12px 0 54px;">
+        <h3>About</h3>
+        <p>We strive to deliver a level of service that exceeds the expectations of our customers. <br />
+          <br />
+          If you have any questions about our products or services, please do not hesitate to contact us. We have friendly, knowledgeable representatives available seven days a week to assist you.</p>
+      </div>
+      <div style="position:relative; float:left; width:240px; height:400px;overflow:hidden; margin:0 12px 0 12px;">
+        <h3>Tweets</h3>
+        <p><span>Tweet</span> <a href="#">@Awlele</a><br /></p>
+        <p style="margin-top:12px"><span>Tweet</span> <a href="#">@Akki</a><br /></p>
+      </div>
+      <div style="position:relative; float:left; max-width:400px; height:400px; overflow:hidden;margin:0 12px 0 12px;">
+        <h3>Mailing list</h3>
+        <p>Subscribe to our mailing list for offers, news updates and more!</p>
+        <br />
+        <form action="#" method="post" >
+          <div >
+            <label  for="exampleInputEmail2">Your email:</label>
+            <input type="email" placeholder="akki@auberge.co.in" style=" border: 2px solid #fff; border-radius: 2px; margin:0 4px 6px 4px; ">
+          </div>
+          <button type="submit" class="btn " >subscribe</button>
+        </form>
+      </div>
+      <div style="position:relative; float:left;max-width:600px; height:400px; overflow:auto;margin:0 12px 0 12px;">
+        <h3>Reach Us</h3>
+        <p>Lake Pichola<br />
+          Udaipur, Rajasthan 313001<br />
+          India<br />
+          <br />
+          Phone: (0294) 286-4752<br />
+          Fax: (022) 227-24431<br />
+          <br />
+        </p>   
+    </div>
+  </div>
+</footer>
+</form>
+</div>
+</body>
+</html>

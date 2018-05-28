@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<link href="css/style.css" rel="stylesheet">
+<style>
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ddd;		
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+h2{
+   border-bottom: 1px solid green;
+}
+img{
+cursor: pointer;
+}
+body{
+    background:#f9f9f9 url(images/load-bg.png) repeat left top; 
+}
+</style>
+</head>
+
+<header id="top" style="background-color:rgb(36,39,42); height:100%; width:100%; padding-left:0px;">
+    <nav role="navigation" style=" background:rgb(36,39,42); height:80px; position:fixed; width:100%;"> 
+        <ul class="blocks" >
+          <li><a href="L'AUBERGE.html">Home</a></li>
+          <li> <a href="L'AUBERGE.html#about" >About Us</a></li>
+          <li><a href="photo.html">Photos</a></li>
+          <li><a href="rooms.html">Book My Stay</a></li>
+          <li><a href="contact.html">contact us</a></li>
+        </ul>
+	</nav>
+        <h1 style="line-height:27px; padding-top:120px;"><a href="L'AUBERGE.html " style="color:#fff; text-decoration:none; ">L'AuBERGE</a></h1>
+</header>
+<body >
+<div style="padding-left: 1cm;">
+<h2>Hotel</h2>
+
+<img id="myImg1" src="images/display.jpg" alt="Hotel view" width="300" height="200">
+<img id="myImg2"  src="images/9.jpg" alt="Hotel salutation" width="300" height="200" float="right">
+<img id="myImg3"  src="images/8.jpg" alt="The entrance" width="300" height="200" float="right">
+<img id="myImg4"  src="images/6.jpg" alt="Spas" width="300" height="200" float="right">
+
+<br /><br />
+
+<h2>Rooms</h2>
+<img id="myRoom1" src="images/deluxe.jpg" alt="The Deluxe Room " width="300" height="200">
+<img id="myRoom2"  src="images/silver.jpg" alt="The Silver Room" width="300" height="200" float="right">
+<img id="myRoom3"  src="images/gold.jpg" alt="The Gold Room" width="300" height="200" float="right">
+<img id="myRoom4"  src="images/platinum.jpg" alt="The Platinum Suite" width="300" height="200" float="right">
+
+<br /><br />
+
+<h2>Food and Restaurants</h2>
+<img id="myRest1" src="images/rest4.jpg" alt="The Food " width="300" height="200">
+<img id="myRest2"  src="images/chefs.jpg" alt="The Chefs" width="300" height="200" float="right">
+<img id="myRest3"  src="images/rest2.jpg" alt="The Restaurants" width="300" height="200" float="right">
+<img id="myRest4"  src="images/dining.jpg" alt="The Auroma" width="300" height="200" float="right">
+
+<br /><br />
+
+<h2>Festivals</h2>
+<img id="myFest1" src="images/ff4.jpg" alt="The Parties " width="300" height="200">
+<img id="myFest2"  src="images/ff1.jpg" alt="The Halls" width="300" height="200" float="right">
+<img id="myFest3"  src="images/ff2.jpg" alt="The Restaurants" width="300" height="200" float="right">
+<img id="myFest4"  src="images/ff3.jpg" alt="The Happiness" width="300" height="200" float="right">
+
+<br /><br />
+
+<h2>Luxuries</h2>
+<img id="mylux1" src="images/lux1.jpg" alt="The Pools " width="300" height="200">
+<img id="mylux2"  src="images/lux2.jpg" alt="The Reading Cafe" width="300" height="200" float="right">
+<img id="mylux3"  src="images/lux3.jpg" alt="The Sitting" width="300" height="200" float="right">
+<img id="mylux4"  src="images/lux4.jpg" alt="The Bathrooms" width="300" height="200" float="right">
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img1 = document.getElementById('myImg1');
+var img2 = document.getElementById('myImg2');
+var img3 = document.getElementById('myImg3');
+var img4 = document.getElementById('myImg4');
+var img5 = document.getElementById('myRoom1');
+var img6 = document.getElementById('myRoom2');
+var img7 = document.getElementById('myRoom3');
+var img8 = document.getElementById('myRoom4');
+var img9 = document.getElementById('myRest1');
+var img10 = document.getElementById('myRest2');
+var img11 = document.getElementById('myRest3');
+var img12 = document.getElementById('myRest4');
+var img13 = document.getElementById('myFest1');
+var img14 = document.getElementById('myFest2');
+var img15 = document.getElementById('myFest3');
+var img16 = document.getElementById('myFest4');
+var img17 = document.getElementById('mylux1');
+var img18 = document.getElementById('mylux2');
+var img19 = document.getElementById('mylux3');
+var img20 = document.getElementById('mylux4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img1.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img2.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img3.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img4.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img5.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img6.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img7.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img8.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img9.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img10.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img11.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img12.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img13.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img14.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img15.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img16.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img17.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img18.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img19.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+img20.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+
+<footer>
+  <div style="position:absolute; width:100%; height:400px; background-color:rgb(51,48,54); margin-top:15px;">
+      <div style="position:relative; float:left; width:300px; height:400px; overflow:hidden; margin:0 12px 0 54px;">
+        <h3>About</h3>
+        <p>We strive to deliver a level of service that exceeds the expectations of our customers. <br />
+          <br />
+          If you have any questions about our products or services, please do not hesitate to contact us. We have friendly, knowledgeable representatives available seven days a week to assist you.</p>
+      </div>
+      <div style="position:relative; float:left; width:240px; height:400px;overflow:hidden; margin:0 12px 0 12px;">
+        <h3>Tweets</h3>
+        <p><span>Tweet</span> <a href="#">@Awlele</a><br /></p>
+        <p style="margin-top:12px"><span>Tweet</span> <a href="#">@Akki</a><br /></p>
+      </div>
+      <div style="position:relative; float:left; max-width:400px; height:400px; overflow:hidden;margin:0 12px 0 12px;">
+        <h3>Mailing list</h3>
+        <p>Subscribe to our mailing list for offers, news updates and more!</p>
+        <br />
+        <form action="#" method="post" >
+          <div >
+            <label  for="exampleInputEmail2">Your email:</label>
+            <input type="email" placeholder="akki@auberge.co.in" style=" border: 2px solid #fff; border-radius: 2px; margin:0 4px 6px 4px; ">
+          </div>
+          <button type="submit" class="btn " >subscribe</button>
+        </form>
+      </div>
+      <div style="position:relative; float:left;max-width:600px; height:400px; overflow:auto;margin:0 12px 0 12px;">
+        <h3>Reach Us</h3>
+        <p>Lake Pichola<br />
+          Udaipur, Rajasthan 313001<br />
+          India<br />
+          <br />
+          Phone: (0294) 286-4752<br />
+          Fax: (022) 227-24431<br />
+          <br />
+        </p>   
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

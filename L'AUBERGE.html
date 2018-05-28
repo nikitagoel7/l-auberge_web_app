@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reponsive HTML Template</title>
+<meta charset=“utf-8”>
+<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body >
+<header id="top" style="background-color:rgb(36,39,42); height:100%;">
+    <nav role="navigation" style=" background:rgb(36,39,42); height:80px; position:absolute; width:100%;"> 
+        <ul class="blocks" >
+          <li><a href="L'AUBERGE.html">Home</a></li>
+          <li> <a href="#about" >About Us</a></li>
+          <li><a href="photo.html">Photos</a></li>
+          <li><a href="rooms.html">Book My Stay</a></li>
+          <li><a href="contact.html">contact us</a></li>
+        </ul>
+	</nav>
+        <h1 style="line-height:27px; padding-top:120px;"><a href="L'AUBERGE.html " style="color:#fff; text-decoration:none; ">L'AuBERGE</a></h1>
+</header>
+    <div style="position: relative; width: 100%; height:360px;">
+	<div style="position:absolute; right: 15%; top:12%; left: 15%; color:#fff;">  
+	 <p style="font-size:40px; text-align:center; line-height:27px;">EXPERIENCE A NEW LEVEL OF LUXURY</p>
+            <p style="font-size:18px; text-align:center; line-height:0px;">WELCOME TO THE ALL NEW L'AUBERGE </p>
+        </div>
+      <img src="images/dining.jpg" id="myImage" class="slider" onclick="changeImage()" alt="Hotel Dining" style="min-width:100%; ">
+      <img src="images/Lobby.jpg" id="myImage" class="slider" onclick="changeImage()" alt="Hotel Dining" style="min-width:100%; ">
+	 </div>
+
+<script>
+
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slider");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); 
+}
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("images/dining")) {
+        image.src = "images/Lobby.jpg";
+    } else {
+        image.src = "images/dining.jpg";
+    }
+}
+</script>
+
+
+
+  <div class="green_bg" style="margin-top:12px">
+      <h2 style="font-family:monospace;"><span style="border-bottom:4px ridge rgb(254,254,254); padding:2px; color:rgb(255,255,255);">What Makes You Stay Here</span></h2>
+	<p style="color:rgb(254,234,254); font-size:18px; font-family:cursive; text-align:center;">
+		      Best Rates Online
+		<br />Magnificent Midtown location
+		<br /> Free Fast Secure WiFi
+		<br /> In-room dining <br /> <br />
+      </p>
+  </div>
+
+    <div class="row" > 
+      <p class="lined centered"><span>Exceptional Experiences</span></p> 
+    </div>
+
+<div style="margin-left:auto; margin-right:auto; width:80%; border-left:6px solid rgb(210,210,210); padding-left:9px;">
+          <p style="font-size: 17.5px; font-weight: 300; line-height: 1.25;">We had a marvelous stay at L'Auberge Hotel. Wonderful interiors, very good service and excellent dining too. Very reasonably priced for a luxury hotel.</p>
+          <small><p style="font-style:italic;">-TripAdviser</small>
+  </div>
+	<div class="row" >
+      <p class="lined centered"><span>Palate with an array of delights</span></p>
+	</div>
+    <div style="position: relative; width: 100%; height:270px; background-color:rgb(36,54,51);">
+	<div style="position:absolute; right: 6%; top:21%; left: 6%; color:#fff;">  
+	 <p style="font-size:30px; text-align:center; line-height:33px; text-transform:uppercase;">The art of the cuisine, when fully mastered, <br />is the one human capability of which only good things can be said. </p>
+        </div>
+      <img src="images/palate.jpg" alt="Hotel Dining" style=" margin-left:4%; margin-right:8%; height:270px; width:92%;">
+    </div>
+
+<section style="background:#f9f9f9 url(images/bg2.png) repeat left top; ">
+    <div class="row">
+      <p class="lined centered"><span>CELEBRATE LIFE’S MOMENTS</span></p>
+      <h2 class="sz60 centered" id="about" >STORY ABOUT US</h2>
+      <p class="lined centered" style=" padding-bottom:15px;"><span>EXTRAORDINARY BEAUTY</span></p>
+	<div style="margin-left: auto; margin-right: auto; width:78%;">
+      <img src="images/display.jpg" alt="Hotel Front" style="width:940px; height:300px; border: 2px solid #eee; border-radius: 15px; ">
+	</div>
+	<div style="margin-left: auto; margin-right: auto; width:90%">
+      <h2 style="font-size:24px;">L'AUBERGE group is recognized the world over for delivering a unique flavor of hospitality that offers world-class refinement </h2>
+	<div style="margin-left: auto; margin-right:auto; width:92%;">
+	<p style="text-align:center; font-size:14px">While remaining deeply rooted in its Indian heritage</p>
+      <p style="text-align:center; font-size:14px ">For more than a century, L'Auberge has brought together the unique beauty and traditions from across India in an experience that highlights true Indian hospitality. This draws on the time-honored traditions central to the Indian homecoming, from the refreshing simplicity of the welcome drink to the careful choreography of the dinner service. An iconic L'Auberge hotel is an ideal mainstay of the destination. By providing jobs to the local community, supporting endangered artisan practices and reviving regal history at palaces where royal families are still in residence, L'Auberge offers a rare insider’s point of view to the fascinating story of India – from Maharaja to modern day. L'Auberge offers guests the refined luxury of heritage combined with effortlessly efficient service and local expertise to create a moment to remember. In India, L'Auberge hotel in strategically located to offer the L'Auberge experience in business hubs, industrial towns and metropolises, as well as the most remote pilgrimage centers, historic and natural destinations. The group has extended its international presence with 15 hotels in the Maldives, Malaysia, the UK, USA, Bhutan, Sri Lanka, Africa and the Middle East.</p>
+      </div>
+</div>
+    </div>
+	<div class=" row ">
+	<hr style="border-color:rgb(180,180,180);">
+      <div style="margin-left: auto; margin-right: auto; width:50%; margin-top:54px; "> <img src="images/room.jpg" alt="pic" style="width:100%; border: 2px solid #eee; border-radius: 12px;" >
+        <h2 style="font-size:24px;">Accommodate the luxury </h2>
+        <p style="font-size:14px;">Featuring splendid furniture, Mewar inspired designs and the most modern technologies, our rooms harmonise authentic style and convenience unlike any of the other luxury hotels in Udaipur.Guests can opt for a suite and enjoy the luxury .Guests who book a stay in a premier room can relax beside garden views, in tastefully appointed accommodation replete with Rajasthani touches.</p>
+        <p style="margin-left:auto; margin-right:auto; width:18%; "><a class="btn btn-book " href="rooms.html" role="button" style=" border: 1px solid #ccc; border-radius: 4px;">Book </a></p>
+      </div>
+    </div>
+  
+</section>
+<section class="green_bg">
+  <div style="margin-bottom:12px">
+    <div class="row">
+      <h2 style="color:rgb(255,255,255);">CREATING UNFORGETTABLE EXPERIENCES</h2>
+      <p  style="text-align:center; color:rgb(252,252,252); margin:33px 0 36px 0;">At L’Auberge , our teams take pride in creating unforgettable moments and long-lasting memories for guests. Whether it’s an small party or an anniversary celebration enjoying a custom tasting menu, we look forward to helping you plan a memorable experience unlike any other.</p>
+      <p style="margin-left:auto; margin-right:auto; width:16%;"><a class="btn btn-top" href="#top" role="button" style=" border: 2px solid #fff; border-radius: 8px;">get started</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="position:absolute; width:100%; height:400px; background-color:rgb(51,48,54);">
+      <div style="position:relative; float:left; width:300px; height:400px; overflow:hidden; margin:0 12px 0 54px;">
+        <h3>About</h3>
+        <p>We strive to deliver a level of service that exceeds the expectations of our customers. <br />
+          <br />
+          If you have any questions about our products or services, please do not hesitate to contact us. We have friendly, knowledgeable representatives available seven days a week to assist you.</p>
+      </div>
+      <div style="position:relative; float:left; width:240px; height:400px;overflow:hidden; margin:0 12px 0 12px;">
+        <h3>Tweets</h3>
+        <p><span>Tweet</span> <a href="#">@Awlele</a><br /></p>
+        <p style="margin-top:12px"><span>Tweet</span> <a href="#">@Akki</a><br /></p>
+      </div>
+      <div style="position:relative; float:left; max-width:400px; height:400px; overflow:hidden;margin:0 12px 0 12px;">
+        <h3>Mailing list</h3>
+        <p>Subscribe to our mailing list for offers, news updates and more!</p>
+        <br />
+        <form action="#" method="post" >
+          <div >
+            <label  for="exampleInputEmail2">Your email:</label>
+            <input type="email" placeholder="akki@auberge.co.in" style=" border: 2px solid #fff; border-radius: 2px; margin:0 4px 6px 4px; ">
+          </div>
+          <button type="submit" class="btn " >subscribe</button>
+        </form>
+      </div>
+      <div style="position:relative; float:left;max-width:600px; height:400px; overflow:auto;margin:0 12px 0 12px;">
+        <h3>Reach Us</h3>
+        <p>Lake Pichola<br />
+          Udaipur, Rajasthan 313001<br />
+          India<br />
+          <br />
+          Phone: (0294) 286-4752<br />
+          Fax: (022) 227-24431<br />
+          <br />
+        </p>   
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
